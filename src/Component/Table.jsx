@@ -11,7 +11,7 @@ export default function Table({ Deletuser, UpdatedUser }) {
 
         async function FeatchData() {
             try {
-                const user = await axios.get('http://localhost:8000/api/get')
+                const user = await axios.get('${process.env.REACT_APP_BACKEND_URL}/api/get')
                 const response = user.data
 
 
