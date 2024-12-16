@@ -26,7 +26,7 @@ export default function AddUser() {
         e.preventDefault();
 
         try {
-            const adduser = await axios.post('${process.env.REACT_APP_BACKEND_URL}/api/create', value)
+            const adduser = await axios.post('http://localhost:8000/api/create', value)
             const response = adduser.data
             if (response.success) {
                 toast.success(response.Message)
