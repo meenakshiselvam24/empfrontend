@@ -49,7 +49,7 @@ export default function UserTable() {
         e.preventDefault();
     
         try {
-            const UpdatedUser = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/update/${updatedUserId}`,value)
+            const UpdatedUser = await axios.put(`https://emp-qit6.onrender.com/api/update/${updatedUserId}`,value)
             const response = UpdatedUser.data
 
             if (response.success) {
