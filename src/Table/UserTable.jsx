@@ -21,7 +21,7 @@ export default function UserTable() {
     }
     const handleUserDelet = async () => {
         try {
-            const DeletUser = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/delete/${userId}`)
+            const DeletUser = await axios.delete(`https://emp-qit6.onrender.com/api/delete/${userId}`)
             const response = DeletUser.data
             if (response.success) {
                 toast.success(response.message)
